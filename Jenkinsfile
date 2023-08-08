@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('npm install version') {
       steps {
-        sh 'npm install'
+        sh 'npm install npm@8.19.2 -g'
       }
     }
     stage('Install') {
@@ -12,7 +12,7 @@ pipeline {
         sh 'npm install'
       }
     }
-        stages ('Build') {
+        stage('Build') {
             steps {
                 sh 'npm run build'
             }
