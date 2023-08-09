@@ -7,11 +7,11 @@ pipeline {
         sh 'npm install npm@8.19.2 -g'
       }
     }
-    stage('Install') {
-      steps {
-        sh 'npm install'
-      }
-    }
+    // stage('Install') {
+    //   steps {
+    //     sh 'npm install'
+    //   }
+    // }
         stage('Build') {
             steps {
                 sh 'npm run build'
